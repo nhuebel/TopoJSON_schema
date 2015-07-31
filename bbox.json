@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://tbd/bbox.json#",
+    "id": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/bbox.json",
     "title": "TopoJSON bounding box",
     "description": "A bounding box as defined by TopoJSON",
     "type": "array",
