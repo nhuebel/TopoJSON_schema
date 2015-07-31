@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://tbd/bbox.json#",
+    "title": "TopoJSON bounding box",
+    "description": "A bounding box as defined by TopoJSON",
+    "type": "array",
+    "items": { "$ref": "#/definitions/row" },
+    "minItems": 2,
+    "maxItems": 2,
+    "definitions": {
+      "row": { 
+	  "type": "array",
+	  "items": {"type": "number"}
+      }
+    },
+    "TODO": "check number of dimensions (2*n), n being the number of dimensions represented in the contained geometries), with the lowest values for all axes followed by the highest values "
+}
