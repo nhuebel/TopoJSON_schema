@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json",
+    "title": "Geometry objects",
+    "description": "A Geometry object as defined by TopoJSON",
+    "type": "object",
+    "properties": {
+    }
+}
