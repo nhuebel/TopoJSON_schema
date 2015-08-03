@@ -4,12 +4,13 @@
     "title": "TopoJSON bounding box",
     "description": "A bounding box as defined by TopoJSON",
     "type": "array",
-    "items": { "$ref": "#/definitions/row" },
+    "items": { "$ref": "#/definitions/dimension" },
     "minItems": 2,
     "maxItems": 2,
     "definitions": {
-      "row": { 
+      "dimension": { 
 	  "type": "array",
+	  "description": "This array should have an entry per dimension in the geometries",
 	  "items": {"type": "number"}
       }
     },
