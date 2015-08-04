@@ -4,6 +4,96 @@
     "title": "Geometry objects",
     "description": "A Geometry object as defined by TopoJSON",
     "type": "object",
+    "required": [ "type" ],
     "properties": {
+        "id": { "type": [ "string", "integer" ]},
+        "properties": { "type": "object"  }
+    },
+    "oneOf": [
+        {
+            "title": "Point",
+            "description": "A Point Geometry object as defined by TopoJSON",
+            "properties": {
+                "type": { "enum": [ "Point" ] },
+                "coordinates": { "$ref": "#/definitions/position" }
+            }
+        },
+        {
+            "title": "MultiPoint",
+            "properties": {
+                "type": { "enum": [ "MultiPoint" ] },
+                "coordinates": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/position" }
+                }
+            }
+        },
+        {
+            "title": "LineString",
+            "properties": {
+                "type": { "enum": [ "LineString" ] },
+                "arcs": {
+                    "type": "array",
+                    "items": { "type": "integer" }
+                }
+            }
+        },
+        {
+            "title": "MultiLineString",
+            "properties": {
+                "type": { "enum": [ "MultiLineString" ] },
+                "arcs": {
+                    "type": "array",
+                    "items": { 
+			"type": "array",
+			"items": {"type": "integer"}
+		    }
+                }
+            }
+        },
+        {
+            "title": "Polygon",
+            "properties": {
+                "type": { "enum": [ "Polygon" ] },
+                "arcs": {
+                    "type": "array",
+                    "items": { 
+			"type": "array",
+			"items": {"type": "integer"},
+			"TODO": "Check if arcs refer to valid LinearRings"
+		    }
+                }
+            }
+        },
+        {
+            "title": "MultiPolygon",
+            "properties": {
+                "type": { "enum": [ "MultiPolygon" ] },
+                "arcs": {
+                    "type": "array",
+                    "items": { 
+			"type": "array",
+			"items": { 
+			    "type": "array",
+			    "items": {"type": "integer"}
+			}
+		    }
+                }
+            }
+        },
+        {
+            "title": "GeometryCollection",
+            "properties": {
+                "type": { "enum": [ "GeometryCollection" ] },
+                "geometries": { "$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json"  }
+            }
+        }
+    ],
+    "definitions": {
+	"position": {
+	    "type": "array",
+	    "items": { "type": "number"},
+	    "minItems": 2
+	}
     }
 }
