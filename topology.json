@@ -37,7 +37,7 @@
 	    "type": "array",
 	    "items": {
 		"type": "array",
-		"items": {"$ref": "#/definitions/position"}
+		"items": {"type": [ "$ref": "#/definitions/position", "null" ] }
 	    },
 	    "minItems": 2
 	},

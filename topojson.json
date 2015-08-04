@@ -10,6 +10,6 @@
     },
     "oneOf": [
         { "$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/topology.json"  },
-        { "$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json" },
+        { "$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json" }
     ]
 }
