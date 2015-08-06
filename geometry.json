@@ -56,11 +56,11 @@
             "properties": {
                 "type": { "enum": [ "Polygon" ] },
                 "arcs": {
+		    "TODO": "Check if arcs refer to valid LinearRings",
                     "type": "array",
                     "items": { 
 			"type": "array",
-			"items": {"type": "integer"},
-			"TODO": "Check if arcs refer to valid LinearRings"
+			"items": {"type": "integer"}
 		    }
                 }
             }
@@ -85,7 +85,10 @@
             "title": "GeometryCollection",
             "properties": {
                 "type": { "enum": [ "GeometryCollection" ] },
-                "geometries": { "$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json"  }
+                "geometries": { 
+		    "type": "array",
+		    "items": { "$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json"  }
+		}
             }
         }
     ],

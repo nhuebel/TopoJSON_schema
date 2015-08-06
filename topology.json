@@ -9,8 +9,7 @@
         "type": { "enum": [ "Topology"] },
         "objects": {
 	    "type": "object",
-	    "properties": {},
-	    "additionalProperties": {"$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json" }
+	    "additionalProperties": {"$ref": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/geometry.json"}
         },
         "arcs": {"$ref": "#/definitions/arcs"},
         "transform": {"$ref": "#/definitions/transform"},
@@ -39,12 +38,12 @@
 		"type": "array",
 		"items": {
 		    "oneOf": [ 
-			{ "type": "$ref": "#/definitions/position"}, 
+			{ "$ref": "#/definitions/position"}, 
 			{ "type": "null" } 
 		    ]
-		 }
-	    },
-	    "minItems": 2
+		 },
+		 "minItems": 2
+	    }
 	},
 	"position": {
 	    "type": "array",

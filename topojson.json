@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://tbd.org/topojson.json#",
+    "id": "https://raw.githubusercontent.com/nhuebel/TopoJSON_schema/master/topojson.json#",
     "title": "TopoJSON object",
     "description": "Schema for a TopoJSON object",
     "type": "object",
