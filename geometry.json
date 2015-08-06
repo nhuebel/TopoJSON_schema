@@ -13,6 +13,7 @@
         {
             "title": "Point",
             "description": "A Point Geometry object as defined by TopoJSON",
+            "required": [ "type","coordinates" ],
             "properties": {
                 "type": { "enum": [ "Point" ] },
                 "coordinates": { "$ref": "#/definitions/position" }
@@ -20,6 +21,8 @@
         },
         {
             "title": "MultiPoint",
+            "description": "A MultiPoint Geometry object as defined by TopoJSON",
+            "required": [ "type","coordinates" ],
             "properties": {
                 "type": { "enum": [ "MultiPoint" ] },
                 "coordinates": {
@@ -30,6 +33,8 @@
         },
         {
             "title": "LineString",
+            "description": "A LineString Geometry object as defined by TopoJSON",
+            "required": [ "type","arcs" ],
             "properties": {
                 "type": { "enum": [ "LineString" ] },
                 "arcs": {
@@ -40,6 +45,8 @@
         },
         {
             "title": "MultiLineString",
+            "description": "A MultiLineString Geometry object as defined by TopoJSON",
+            "required": [ "type","arcs" ],
             "properties": {
                 "type": { "enum": [ "MultiLineString" ] },
                 "arcs": {
@@ -53,6 +60,8 @@
         },
         {
             "title": "Polygon",
+            "description": "A Polygon Geometry object as defined by TopoJSON",
+            "required": [ "type","arcs" ],
             "properties": {
                 "type": { "enum": [ "Polygon" ] },
                 "arcs": {
@@ -67,6 +76,8 @@
         },
         {
             "title": "MultiPolygon",
+            "description": "A MultiPolygon Geometry object as defined by TopoJSON",
+            "required": [ "type","arcs" ],
             "properties": {
                 "type": { "enum": [ "MultiPolygon" ] },
                 "arcs": {
@@ -83,6 +94,8 @@
         },
         {
             "title": "GeometryCollection",
+            "description": "A MultiPolygon Geometry object as defined by TopoJSON",
+            "required": [ "type","geometries" ],
             "properties": {
                 "type": { "enum": [ "GeometryCollection" ] },
                 "geometries": { 
